@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { SortResult } from "../types";
 
+import AboutSection from "./AboutSection";
+import Card from "./Card";
 import Page from "./Page";
 import PageHeader from "./PageHeader";
 import SortForm from "./SortForm";
@@ -21,20 +23,26 @@ export default function App() {
 
   return (
     <Page>
-      <PageHeader
-        title="Package Sorter"
-        subtitle="Enter package dimensions and mass to determine which stack it belongs to."
-      />
+      <Card>
+        <PageHeader
+          title="Package Sorter"
+          subtitle="Enter package dimensions and mass to determine which stack it belongs to."
+        />
 
-      <div className="my-8 flex flex-col gap-0.5 text-sm text-slate-300">
-        {SORTING_RULES.map((rule) => (
-          <span key={rule.label}>
-            <strong className={rule.color}>{rule.label}</strong> - {rule.description}
-          </span>
-        ))}
-      </div>
-      <SortForm onSubmit={handleSubmit} />
-      {result && <SortResultView result={result} />}
+        <div className="my-8 flex flex-col gap-0.5 text-sm text-slate-300">
+          {SORTING_RULES.map((rule) => (
+            <span key={rule.label}>
+              <strong className={rule.color}>{rule.label}</strong> - {rule.description}
+            </span>
+          ))}
+        </div>
+        <SortForm onSubmit={handleSubmit} />
+        {result && <SortResultView result={result} />}
+      </Card>
+
+      <Card>
+        <AboutSection />
+      </Card>
     </Page>
   );
 }

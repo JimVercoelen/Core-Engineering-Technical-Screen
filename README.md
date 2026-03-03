@@ -1,6 +1,6 @@
-# Package Sorting Function
+# Package Sorter
 
-A TypeScript implementation of a robotic arm dispatch function that sorts packages into the correct stack based on their volume and mass.
+A TypeScript + React web app that sorts packages into the correct stack based on their dimensions and mass. Built with Vite, Tailwind CSS, Formik, and Yup.
 
 ## Rules
 
@@ -19,36 +19,37 @@ A TypeScript implementation of a robotic arm dispatch function that sorts packag
 npm install
 ```
 
-## Run Tests
-
-```bash
-npm test
-```
-
-## Build
-
-```bash
-npm run build
-```
-
-## Web UI
-
-Start the development server:
+## Development
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+## Build
 
 ```bash
 npm run build:web
 ```
 
+## Tests
+
+```bash
+npm test
+```
+
+## Lint & Format
+
+```bash
+npm run lint            # check for lint errors
+npm run lint:fix        # auto-fix lint errors
+npm run format          # format all source files
+npm run format:check    # check formatting
+```
+
 ## Usage
 
 ```typescript
-import { sort } from "./src/sort";
+import { sort } from "./src/utils/sort";
 
 sort(100, 100, 100, 10); // "SPECIAL" (bulky — volume = 1,000,000)
 sort(10, 10, 10, 25); // "SPECIAL" (heavy — mass >= 20)

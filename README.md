@@ -51,8 +51,8 @@ npm run format:check    # check formatting
 ```typescript
 import { sort } from "./src/utils/sort";
 
-sort(100, 100, 100, 10); // "SPECIAL" (bulky — volume = 1,000,000)
-sort(10, 10, 10, 25); // "SPECIAL" (heavy — mass >= 20)
+sort(100, 100, 100, 10); // "SPECIAL" (bulky - volume = 1,000,000)
+sort(10, 10, 10, 25); // "SPECIAL" (heavy - mass >= 20)
 sort(150, 50, 50, 25); // "REJECTED" (bulky and heavy)
 sort(10, 10, 10, 5); // "STANDARD"
 ```

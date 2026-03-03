@@ -33,7 +33,7 @@ export default function AboutSection() {
         </p>
         <p>
           Over the past 6+ years, I have worked full-time with international teams in remote
-          environments, owning features end-to-end — from architecture and implementation to
+          environments, owning features end-to-end - from architecture and implementation to
           production deployment. I am comfortable operating across the full stack, translating
           complex product requirements into clean, maintainable, and scalable solutions.
         </p>
